@@ -6,17 +6,20 @@
 }
 
 :root {
-    --primary-color: #0066cc;
-    --secondary-color: #00a3e0;
-    --accent-color: #ff6b35;
-    --text-dark: #1a1a1a;
-    --text-light: #666;
-    --bg-light: #f8f9fa;
+    --primary-color: #00b4d8;
+    --secondary-color: #0077b6;
+    --accent-color: #f4a261;
+    --text-dark: #2d3748;
+    --text-light: #718096;
+    --bg-light: #f7fafc;
+    --bg-sand: #fef3e2;
+    --coral: #ff6b6b;
+    --turquoise: #06d6a0;
     --white: #ffffff;
-    --shadow: 0 2px 8px rgba(0,0,0,0.1);
-    --shadow-lg: 0 4px 16px rgba(0,0,0,0.15);
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-lg: 0 4px 20px rgba(0,0,0,0.12);
     --transition: all 0.3s ease;
-    --border-radius: 8px;
+    --border-radius: 12px;
 }
 
 body {
@@ -151,25 +154,50 @@ a {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #0066cc 0%, #00a3e0 100%);
+    background-image: linear-gradient(rgba(0, 119, 182, 0.7), rgba(0, 180, 216, 0.7)), 
+                      url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--white);
-    padding: 120px 20px;
+    padding: 140px 20px;
     text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-    max-width: 700px;
+    font-size: 1.35rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.98;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    line-height: 1.6;
 }
 
 .hero-cta {
@@ -336,7 +364,7 @@ a {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+    background: linear-gradient(135deg, var(--coral) 0%, var(--accent-color) 100%);
     color: var(--white);
 }
 
