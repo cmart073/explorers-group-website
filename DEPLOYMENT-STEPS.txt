@@ -1,0 +1,102 @@
+=====================================================
+DEPLOYMENT STEPS - COPY/PASTE READY
+=====================================================
+
+STEP 1: CREATE GITHUB REPOSITORY
+---------------------------------
+1. Go to: https://github.com/new
+2. Repository name: explorers-group-website
+3. Public or Private: Your choice
+4. Click: "Create repository"
+
+STEP 2: UPLOAD FILES TO GITHUB
+-------------------------------
+1. On the new repository page, click: "uploading an existing file"
+2. Drag and drop ALL files and folders from the website
+3. Commit message: "Initial deployment"
+4. Click: "Commit changes"
+
+STEP 3: CONNECT TO CLOUDFLARE PAGES
+------------------------------------
+1. Go to: https://dash.cloudflare.com
+2. Click: "Workers & Pages" (left sidebar)
+3. Click: "Create application"
+4. Click: "Pages" tab
+5. Click: "Connect to Git"
+6. Sign in to GitHub if prompted
+7. Select repository: "explorers-group-website"
+8. Click: "Begin setup"
+
+STEP 4: CONFIGURE BUILD SETTINGS
+---------------------------------
+Project name: explorers-group
+Production branch: main
+Framework preset: None
+Build command: (leave empty)
+Build output directory: /
+Root directory: /
+
+Click: "Save and Deploy"
+
+STEP 5: WAIT FOR DEPLOYMENT
+---------------------------
+Your site will deploy automatically (30-60 seconds)
+You'll get a URL like: explorers-group.pages.dev
+
+STEP 6: ADD CUSTOM DOMAIN
+-------------------------
+1. Click: "Custom domains"
+2. Click: "Set up a custom domain"
+3. Enter: www.theexplorersgroup.com
+4. Click: "Continue"
+
+IF YOUR DOMAIN IS ON CLOUDFLARE:
+- Click: "Activate domain"
+- Done!
+
+IF YOUR DOMAIN IS ELSEWHERE:
+- Copy the CNAME record shown
+- Go to your DNS provider
+- Add CNAME record:
+  Name: www
+  Value: (paste value from Cloudflare)
+- Wait 5-60 minutes for DNS propagation
+
+STEP 7: TEST YOUR SITE
+----------------------
+Visit: https://www.theexplorersgroup.com
+Check:
+- Homepage loads correctly
+- Navigation works
+- Mobile responsive
+- Links work
+
+DONE! 🎉
+--------
+
+MAKING UPDATES:
+---------------
+1. Go to your GitHub repository
+2. Click on any file to edit
+3. Make changes
+4. Commit changes
+5. Cloudflare auto-deploys in 30-60 seconds
+
+OR upload new files through GitHub interface
+
+
+TROUBLESHOOTING:
+----------------
+Site not loading?
+- Check Cloudflare Pages deployment status
+- Verify custom domain DNS settings
+
+Pages looking broken?
+- Make sure ALL files were uploaded (especially css/ and js/ folders)
+- Check browser console for errors (F12)
+
+Need help?
+- Cloudflare Docs: https://developers.cloudflare.com/pages/
+- GitHub Docs: https://docs.github.com/
+
+=====================================================
